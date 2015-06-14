@@ -26,8 +26,12 @@ use DatabaseController as DB;
 			if(isset($_COOKIE["userIdentificator"])) {
 				$user=$_COOKIE["userIdentificator"];
 			}
-			else $user=1;
-			
+			if(!$user) {
+				die("There is error with your session. Please refresh the page");
+			}
+			if(!$date or !$color or !$name) {
+				die("Please fill all fields");	
+			}
 			$sql="Insert into events (eventDate,color,name,user) values ('$date','$color','$name','$user')";
 			$result=mysql_query($sql,$this->db);
 			
