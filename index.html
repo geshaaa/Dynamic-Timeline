@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Timeline app</title>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300&subset=cyrillic-ext,latin' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+<!-- Bootstrap -->
+<link rel="stylesheet" href="css/main.css" type="text/css" />
+<!-- Main css -->
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="js/colorpicker.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script src="js/scripts.js"></script>
+</head>
+<body>
+<h1>Dynamic Timeline Test</h1>
+<div class="">
+  <div class="col-md-4">
+    <h2>Add new event</h2>
+    <h3 class="error" id="errorMsg"></h3>
+    <div>
+      <input type="text" placeholder="Date" class="datepicker form-control" name="date" id="date">
+      <div class="bfh-colorpicker open" id="divColorpicker" data-name="color" data-align="right" data-placeholder="Color" data-color=""></div>
+      <input type="text" placeholder="Name" name="name" class="form-control" id="name">
+      <button class="submitButton" onClick="addNewEvent()">+ADD</button>
+    </div>
+  </div>
+  <div class="col-md-8 timeline" id="timeline"></div>
+</div>
+</body>
+</html>
